@@ -39,14 +39,13 @@ bool Stack::isEmpty()
 
 void Stack::clear()
 {
-	if (isEmpty())
-		return;
 	while (!isEmpty())
 		pop();
 }
 
 bool Stack::isBracketsRight(string str)
 {
+	clear();
 	for (auto ch : str) {
 		// cout << ch; отладка
 		if (ch == '(' || ch == '[' || ch == '{')
