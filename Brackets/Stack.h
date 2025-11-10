@@ -3,8 +3,6 @@
 
 using namespace std;
 
-using namespace std;
-
 class Stack {
 	struct Node {
 		char data;
