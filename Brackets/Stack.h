@@ -25,6 +25,4 @@ public:
 
 	bool isEmpty();
 	void clear();
-
-	bool isBracketsRight(string str);
 };

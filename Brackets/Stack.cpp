@@ -42,20 +42,3 @@ void Stack::clear()
 	while (!isEmpty())
 		pop();
 }
-
-bool Stack::isBracketsRight(string str)
-{
-	clear();
-	for (auto ch : str) {
-		// cout << ch; отладка
-		if (ch == '(' || ch == '[' || ch == '{')
-			push(ch);
-		else if (isEmpty())
-			return false;
-		else if (ch == ')' && top->data == '(' || ch == ']' && top->data == '[' || ch == '}' && top->data == '{')
-			pop();
-		else
-			return false;
-	}
-	return isEmpty();
-}
